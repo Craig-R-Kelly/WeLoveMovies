@@ -5,7 +5,15 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: 'https://movies-frontend-4epd.onrender.com', 
+  optionsSuccessStatus: 200, 
+  credentials: true, 
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 // added the line above and the block below for deployment
