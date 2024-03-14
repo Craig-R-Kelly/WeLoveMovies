@@ -4,6 +4,11 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
+app.use(express.json());
+// added the line above and the block below for deployment
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'Welcome to the We Love Movies API!' });
+});
 
 const moviesRouter = require("./movies/movies.router");
 const reviewsRouter = require("./reviews/reviews.router");
