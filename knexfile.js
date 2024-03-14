@@ -6,10 +6,6 @@ require("dotenv").config();
 //   DATABASE_URL = "postgresql://postgres@localhost/postgres",
 // } = process.env;
 
-// const { // 1st attempt
-//   DATABASE_URL = "postgres://nfdjoett:9mWjdan8xp-3zm8IQfdLTtL7wKR35AIb@otto.db.elephantsql.com/nfdjoett",
-// } = process.env;
-
 const {
   DATABASE_URL = "postgres://pyzrghaz:KbvhGeb-s6iEJRp7LVZJWpN1tpY6ch8X@otto.db.elephantsql.com/pyzrghaz",
 } = process.env;

@@ -1,9 +1,13 @@
+// starter code was lines 1, 2, 4, and last
+
 if (process.env.USER) require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://movies-frontend-4epd.onrender.com/theaters"
+}));
 app.use(express.json());
 // added the line above and the block below for deployment
 app.get('/', (req, res) => {
